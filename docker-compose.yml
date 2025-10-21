@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  fastapi-app:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - OPA_SERVER_URL=http://opa-sidecar:8181/v1/data/sample
+    depends_on:
+      - opa-sidecar
+    networks:
+      - fastapi-opa-network
+
+  opa-sidecar:
+    build:
+      context: .
+      dockerfile: Dockerfile.opa
+    ports:
+      - "8181:8181"
+    volumes:
+      - ./policy:/policy
+    networks:
+      - fastapi-opa-network
+
+networks:
+  fastapi-opa-network:
+    driver: bridge

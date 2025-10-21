@@ -1,0 +1,73 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fastapi-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      role: fastapi-app
+  template:
+    metadata:
+      labels:
+        role: fastapi-app
+    spec:
+      containers:
+        - name: fastapi-app
+          image: fastapi-opa-app:v1
+          env:
+            - name: OPA_SERVER_URL
+              value: "http://opa-sidecar:8181/v1/data/sample"
+          imagePullPolicy: IfNotPresent
+          resources:
+            limits:
+              memory: 1Gi
+          ports:
+            - name: http
+              containerPort: 8000
+          livenessProbe:
+            httpGet:
+              port: http
+              path: /health/liveness
+            initialDelaySeconds: 20
+            failureThreshold: 20
+            periodSeconds: 1
+          readinessProbe:
+            httpGet:
+              port: http
+              path: /health/readiness
+            initialDelaySeconds: 30
+            failureThreshold: 2
+            periodSeconds: 1
+          # env section already exists above, removing duplicate
+        - name: opa
+          image: openpolicyagent/opa:1.9.0
+          ports:
+            - name: http
+              containerPort: 8181
+          args:
+            - "run"
+            - "--server"
+            - "--addr=0.0.0.0:8181"
+            - "/policies/admin.rego"
+          volumeMounts:
+            - readOnly: true
+              mountPath: /policies
+              name: example-policy
+          livenessProbe:
+            httpGet:
+              scheme: HTTP
+              port: 8181
+            initialDelaySeconds: 5
+            periodSeconds: 5
+          readinessProbe:
+            httpGet:
+              path: /health?bundle=true
+              scheme: HTTP
+              port: 8181
+            initialDelaySeconds: 5
+            periodSeconds: 5
+      volumes:
+        - name: example-policy
+          configMap:
+            name: example-policy
